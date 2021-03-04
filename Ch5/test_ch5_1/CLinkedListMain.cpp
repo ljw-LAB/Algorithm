@@ -5,6 +5,40 @@
 #include<string.h>
 #include"CLinkedList.h"
 
+void ShowEmployeeInfo(People* peo)
+{
+	printf("people name : %s \n", peo->name);
+	printf("people id : %d \n", peo->id);
+
+}
+
+People* WhoNightDuty(List *plist, char *name ,int num)
+{
+	int i, temp_num;
+	People *ret;
+
+	temp_num = LCount(plist);
+
+	LFirst(plist, &ret);
+
+	if(strcmp(ret->name, name) != 0)
+	{
+		for(i = 0; i < temp_num-1; i++)
+		{
+			LNext(plist, &ret);
+			if(strcmp(ret->name, name) == 0)
+				break;
+		}
+		if(i >= temp_num)
+			return NULL;
+	}
+
+	for(i = 0; i < num; i++)
+		LNext(plist, &ret);
+
+	return ret;
+}
+
 int main(void)
 {
 	int i;
@@ -50,6 +84,8 @@ int main(void)
 	}
 	printf("\n");
 
-	day_counter(&list, "eee", 3);
+	
+	ShowEmployeeInfo(WhoNightDuty(&list, "dee", 3));
+	//day_counter(&list, "eee", 3);
 	return 0;
 }
