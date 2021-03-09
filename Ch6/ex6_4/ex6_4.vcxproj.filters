@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CLinkedList.cpp">
+    <ClCompile Include="PostCalculator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CListBaseStack.cpp">
+    <ClCompile Include="ListBaseStack.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CListBaseStackMain.cpp">
+    <ClCompile Include="PostCalculatorMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CLinkedList.h">
+    <ClInclude Include="ListBaseStack.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CListBaseStack.h">
+    <ClInclude Include="PostCalculator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
